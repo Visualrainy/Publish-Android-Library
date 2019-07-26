@@ -46,6 +46,7 @@ project.afterEvaluate {
     task copyDependency(type: Copy) {
 //            from configurations.debugCompileClasspath
         from configurations.debugRuntimeClasspath
-        into 'libs'
+        into './build/intermediates/packaged-classes/debug/libs'
     }
+    mergeDebugJniLibFolders.dependsOn copyDependency
 }
