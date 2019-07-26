@@ -10,9 +10,13 @@ class GalleryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
+
+        loading.setOnClickListener {
+            loadFromNetwork("https://www.perforce.com/sites/default/files/image/2018-04/image-blog-social-writing-clean-code_0.png")
+        }
     }
 
-    fun loadFromNetwork(url: String) {
+    private fun loadFromNetwork(url: String) {
         Glide.with(this).load(url).into(structure_iv)
     }
 }
