@@ -62,7 +62,7 @@ project.afterEvaluate {
             libraryGl(MavenPublication) {
                 groupId 'com.visual.galleryloader'
                 artifactId 'galleryloader'
-                version '5.0'
+                version '6.0'
 
                 artifact bundleReleaseAar
 
@@ -70,7 +70,7 @@ project.afterEvaluate {
                 pom.withXml {
                     def dependenciesNode = asNode().appendNode('dependencies')
 
-                    configurations.myConfig.allDependencies.each {
+                    configurations.implementation.allDependencies.each {
                         println it
                         if (it.group != null && it.version != null && (it.name != null && it.name != 'unspecified')) {
                             def dependencyNode = dependenciesNode.appendNode('dependency')
