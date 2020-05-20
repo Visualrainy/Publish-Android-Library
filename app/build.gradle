@@ -32,7 +32,7 @@ dependencies {
 
     //need to add the below dependencies for galleryloader library to fix "java.lang.ClassNotFoundException: Didn't find class "com.bumptech.glide.Glide"
 //    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    implementation 'com.visual.galleryloader:galleryloader:6.0'
+    implementation 'com.visual.galleryloader:galleryloader:9.0'
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'

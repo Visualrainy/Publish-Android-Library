@@ -49,12 +49,12 @@ dependencies {
 }
 
 project.afterEvaluate {
-    task copyDependency(type: Copy) {
-//            from configurations.debugCompileClasspath
-        from configurations.myConfig
-        into './build/intermediates/packaged-classes/debug/libs'
-    }
-    mergeDebugJniLibFolders.dependsOn copyDependency
+//    task copyDependency(type: Copy) {
+////            from configurations.debugCompileClasspath
+//        from configurations.myConfig
+//        into './build/intermediates/packaged-classes/debug/libs'
+//    }
+//    mergeDebugJniLibFolders.dependsOn copyDependency
 
 
     publishing {
@@ -62,7 +62,7 @@ project.afterEvaluate {
             libraryGl(MavenPublication) {
                 groupId 'com.visual.galleryloader'
                 artifactId 'galleryloader'
-                version '6.0'
+                version '9.0'
 
                 artifact bundleReleaseAar
 
